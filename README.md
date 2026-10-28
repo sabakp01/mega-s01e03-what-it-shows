@@ -25,4 +25,9 @@ overlapping export pages). Intake tags disagree with the cause on 38 reports.
 
 Verify: `node tools/analyze.mjs` (needs Node 18+; uses `Intl` for locale day-order).
 
+## Desk outcome (05 Oct, from the desk's engineering update)
+
+The desk closed #4471: `parser` **FIXED** (`fix(dates): parse dd/mm for eu locales`),
+`hint` **WON'T FIX** (booking-v3 form retired). Both GitHub tickets here closed accordingly.
+
 Written by Piotr with harness Cline, 2026-10-28, for MEGA.dev Challenge S01E03.
