@@ -17,8 +17,8 @@ overlapping export pages). Intake tags disagree with the cause on 38 reports.
 
 The kb export as given, with my page added — the kb tree sits at the repo root:
 
-- `src/routes/kb/incidents/4471-split/+page.svx` — my signed page (signature `Piotr + Cline`,
-  desk ref `DR-YZWP-XEYZ`).
+- `src/routes/kb/incidents/4471-split/+page.svx` — my signed page (signature = the challenge
+  `ticket` from start-challenge, exactly as given, in the frontmatter).
 - `page/4471-split.html` — that page as the desk will see it: runbook frame, `CauseTable`,
   `QueueTimeline`, `Callout`, `RenderStamp`, all computed from the export data.
 - `tools/analyze.mjs` — reproduces `causes.ts` over the export and prints the counts.

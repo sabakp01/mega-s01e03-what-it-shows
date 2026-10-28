@@ -4,7 +4,7 @@ title: '#4471 split · what the 412 reports actually show'
 owner: Piotr (with harness Cline)
 status: known
 reviewed: 2026-10-28
-signature: Piotr + Cline
+signature: v1.eyJzdWIiOiI1MzMyIiwiYXVkIjoiY2hhbGxlbmdlOndoYXQtaXQtc2hvd3MiLCJpYXQiOjE3OTMyMDUzMDcsImV4cCI6MTc5MzI5MTcwN30.2iCUIBtypFoObQvgpdnlcxQ86rXaHj70FQopn1L-MM4
 ---
 
 <script>

@@ -68,7 +68,7 @@ const daysSince = (d, now = new Date()) => Math.floor((now.getTime() - new Date(
 const TITLE = '#4471 split · what the 412 reports actually show';
 const OWNER = 'Piotr (with harness Cline)';
 const STATUS = 'known';
-const SIGNATURE = 'Piotr + Cline';
+const SIGNATURE = 'v1.eyJzdWIiOiI1MzMyIiwiYXVkIjoiY2hhbGxlbmdlOndoYXQtaXQtc2hvd3MiLCJpYXQiOjE3OTMyMDUzMDcsImV4cCI6MTc5MzI5MTcwN30.2iCUIBtypFoObQvgpdnlcxQ86rXaHj70FQopn1L-MM4';
 const ref = deskRef(SIGNATURE);
 console.log('desk ref for signature', JSON.stringify(SIGNATURE), '=', ref);
 
