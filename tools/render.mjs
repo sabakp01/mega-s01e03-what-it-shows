@@ -67,7 +67,7 @@ const daysSince = (d, now = new Date()) => Math.floor((now.getTime() - new Date(
 // frontmatter
 const TITLE = '#4471 split · what the 412 reports actually show';
 const OWNER = 'Piotr (with harness Cline)';
-const STATUS = 'proposed';
+const STATUS = 'known';
 const SIGNATURE = 'Piotr + Cline';
 const ref = deskRef(SIGNATURE);
 console.log('desk ref for signature', JSON.stringify(SIGNATURE), '=', ref);
@@ -136,7 +136,7 @@ ${causeTable}
 <p>The <code>hint</code> group is three tenants only — <code>alder.physio</code>, <code>copper.studio</code>,
 <code>pale.harbour</code> — the ones running <code>booking-v3</code>. Their form prints <code>MM/DD/YYYY</code>
 under the date field, their people type what the hint tells them, and the form reads it the tenant&rsquo;s way.
-That is not the shared parser flipping month and day; it is the form&rsquo;s own hint. It needs its own ticket
+That is not the shared parser flipping month and day; it is the form&rsquo;s own hint. It needed its own ticket
 and its own fix.</p>
 <h2>The queue since April</h2>
 ${timeline}
@@ -146,6 +146,13 @@ ${timeline}
 <ul>
 <li><strong>parser</strong> — dates read month first for day-first tenants — <strong>379 reports</strong> — <a href="https://github.com/sabakp01/mega-s01e03-what-it-shows/issues/1">issue #1</a></li>
 <li><strong>hint</strong> — booking-v3 prints <code>MM/DD/YYYY</code> for day-first tenants — <strong>33 reports</strong> — <a href="https://github.com/sabakp01/mega-s01e03-what-it-shows/issues/2">issue #2</a></li>
+</ul>
+<h2>Desk outcome</h2>
+<p>The desk closed #4471 on 05 oct, after the split was filed. Both tickets here close the
+same way the desk closed them:</p>
+<ul>
+<li><code>parser</code> — <strong>FIXED</strong> — <code>fix(dates): parse dd/mm for eu locales</code> — issue #1 closed completed.</li>
+<li><code>hint</code> — <strong>WON&rsquo;T FIX</strong> — the <code>booking-v3</code> form is retired, and the hint goes with it — issue #2 closed not planned.</li>
 </ul>
 <h2>What the counts rest on</h2>
 <ul>

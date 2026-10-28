@@ -2,7 +2,7 @@
 layout: runbook
 title: '#4471 split · what the 412 reports actually show'
 owner: Piotr (with harness Cline)
-status: proposed
+status: known
 reviewed: 2026-10-28
 signature: Piotr + Cline
 ---
@@ -30,7 +30,7 @@ reports were merged into the wrong place — different bug, different fix.
 The `hint` group is three tenants only — `alder.physio`, `copper.studio`, `pale.harbour` —
 the ones running `booking-v3`. Their form prints `MM/DD/YYYY` under the date field, their
 people type what the hint tells them, and the form reads it the tenant's way. That is not
-the shared parser flipping month and day; it is the form's own hint. It needs its own
+the shared parser flipping month and day; it is the form's own hint. It needed its own
 ticket and its own fix.
 
 ## The queue since April
@@ -44,6 +44,15 @@ One ticket per problem, filed in
 
 - **parser** — dates read month first for day-first tenants — **379 reports** — [issue #1](https://github.com/sabakp01/mega-s01e03-what-it-shows/issues/1)
 - **hint** — booking-v3 prints `MM/DD/YYYY` for day-first tenants — **33 reports** — [issue #2](https://github.com/sabakp01/mega-s01e03-what-it-shows/issues/2)
+
+## Desk outcome
+
+The desk closed #4471 on 05 oct, after the split was filed. Both tickets here close the
+same way the desk closed them:
+
+- `parser` — **FIXED** — `fix(dates): parse dd/mm for eu locales` — issue #1 closed completed.
+- `hint` — **WON'T FIX** — the `booking-v3` form is retired, and the hint goes with it —
+  issue #2 closed not planned.
 
 ## What the counts rest on
 
