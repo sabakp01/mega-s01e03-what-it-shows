@@ -1,0 +1,65 @@
+---
+layout: runbook
+title: '#4471 split · what the 412 reports actually show'
+owner: Piotr (with harness Cline)
+status: proposed
+reviewed: 2026-10-28
+signature: Piotr + Cline
+---
+
+<script>
+  import CauseTable from '#lib/kb/CauseTable.svelte';
+  import QueueTimeline from '#lib/kb/QueueTimeline.svelte';
+  import Callout from '#lib/kb/Callout.svelte';
+  import RenderStamp from '#lib/kb/RenderStamp.svelte';
+</script>
+
+#4471 was merged as one issue: "the parser reads dates month first". Run the desk's own
+logic (`src/lib/kb/causes.ts`) over the export and the ticket turns out to hold **two
+different bugs**. One of them has no ticket of its own.
+
+<Callout kind="warn">
+Two causes in one ticket: `parser` (379 reports) and `hint` (33 reports). The `hint`
+reports were merged into the wrong place — different bug, different fix.
+</Callout>
+
+## What #4471 contains
+
+<CauseTable ticket={4471} />
+
+The `hint` group is three tenants only — `alder.physio`, `copper.studio`, `pale.harbour` —
+the ones running `booking-v3`. Their form prints `MM/DD/YYYY` under the date field, their
+people type what the hint tells them, and the form reads it the tenant's way. That is not
+the shared parser flipping month and day; it is the form's own hint. It needs its own
+ticket and its own fix.
+
+## The queue since April
+
+<QueueTimeline ticket={4471} />
+
+## Tickets filed
+
+One ticket per problem, filed in the public repo for this analysis (linked from this
+page's source in that repo, `README.md`):
+
+- **parser** — dates read month first for day-first tenants — **379 reports**
+- **hint** — booking-v3 prints `MM/DD/YYYY` for day-first tenants — **33 reports**
+
+## What the counts rest on
+
+- The export holds **427 entries but 412 ids**: 15 reports come twice (overlapping export
+  pages). One id, one report — `uniqueById` in `causes.ts`. The desk's "412 reports" is the
+  unique count; the raw export says 427.
+- Intake tags are guesses and disagree with the cause on **38 reports**: 23 `parser`
+  reports tagged `hint`, 15 `hint` reports tagged `parser`. Tag by tenant and channel
+  (`causeOf`), not by the reporter's browser.
+- 5 reports (`desk-notes.json`, `oneDayMove`) read as a one-day move, not a month flip.
+  Counted under `parser` where they are filed, footnoted there by the desk.
+
+## Lessons
+
+- Merging on subject (decision 0001) put two bugs in one ticket. The body and the tenant
+  say what the subject does not.
+- A big ticket is not one bug. Run the logic before writing "one issue, one fix queued".
+
+<RenderStamp {signature} />
