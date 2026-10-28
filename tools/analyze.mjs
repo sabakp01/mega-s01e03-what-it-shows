@@ -1,6 +1,7 @@
 import { readFileSync, readdirSync } from 'node:fs';
+import { fileURLToPath } from 'node:url';
 
-const base = 'C:/Users/admin/Desktop/course/s01e01/work/kb/support-kb/src/lib/data';
+const base = fileURLToPath(new URL('../src/lib/data', import.meta.url));
 const reports = JSON.parse(readFileSync(base + '/reports-4471.json', 'utf8'));
 const notes = JSON.parse(readFileSync(base + '/desk-notes.json', 'utf8'));
 const tenants = readdirSync(base + '/tenants').map((f) => JSON.parse(readFileSync(base + '/tenants/' + f, 'utf8')));

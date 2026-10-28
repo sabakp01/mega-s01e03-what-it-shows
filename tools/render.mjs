@@ -2,9 +2,10 @@
 // the runbook frame + CauseTable + QueueTimeline + Callout + RenderStamp,
 // computed from the same data the desk's components use.
 import { readFileSync, readdirSync, writeFileSync, mkdirSync } from 'node:fs';
+import { fileURLToPath } from 'node:url';
 
-const repo = 'C:/Users/admin/Desktop/course/s01e01/work/repo';
-const dataDir = repo + '/support-kb/src/lib/data';
+const repo = fileURLToPath(new URL('..', import.meta.url));
+const dataDir = repo + 'src/lib/data';
 const reports = JSON.parse(readFileSync(dataDir + '/reports-4471.json', 'utf8'));
 const notes = JSON.parse(readFileSync(dataDir + '/desk-notes.json', 'utf8'));
 const tenants = readdirSync(dataDir + '/tenants').map((f) => JSON.parse(readFileSync(dataDir + '/tenants/' + f, 'utf8')));
@@ -231,7 +232,7 @@ figcaption { color: var(--muted); font-size: 0.85rem; }
 </body>
 </html>`;
 
-mkdirSync(repo + '/page', { recursive: true });
-writeFileSync(repo + '/page/4471-split.html', html);
+mkdirSync(repo + 'page', { recursive: true });
+writeFileSync(repo + 'page/4471-split.html', html);
 console.log('wrote repo/page/4471-split.html');
 
