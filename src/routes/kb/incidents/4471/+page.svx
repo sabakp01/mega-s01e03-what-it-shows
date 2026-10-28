@@ -34,3 +34,9 @@ Known. One issue, one fix queued.
 
 - A big ticket is mostly one bug reported many times. Merge early, count once.
 - Write the page while the queue is still in your head.
+
+## See also
+
+- [#4471 split · what the 412 reports actually show](/kb/incidents/4471-split) — an outside
+  page (signed `Piotr + Cline`) that ran `causes.ts` over this export and found two causes
+  in this ticket, not one. Filed tickets: [parser](https://github.com/sabakp01/mega-s01e03-what-it-shows/issues/1), [hint](https://github.com/sabakp01/mega-s01e03-what-it-shows/issues/2).

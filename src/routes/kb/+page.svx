@@ -19,6 +19,8 @@ Start with [triage](/kb/triage/dedupe) if you are new on the desk.
 
 <KbIndex />
 
+New page from outside the desk: [what #4471 actually shows](/kb/incidents/4471-split) — signed `Piotr + Cline`, desk ref `DR-YZWP-XEYZ`. It splits #4471 into two causes and links the filed tickets.
+
 ## Writing a page
 
 Keep the words here and the logic in `src/lib`. A number that can be computed should be
