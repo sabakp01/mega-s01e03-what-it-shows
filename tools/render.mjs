@@ -140,11 +140,11 @@ and its own fix.</p>
 <h2>The queue since April</h2>
 ${timeline}
 <h2>Tickets filed</h2>
-<p>One ticket per problem, filed in the public repo for this analysis (linked from this page&rsquo;s source in
-that repo, <code>README.md</code>):</p>
+<p>One ticket per problem, filed in
+<a href="https://github.com/sabakp01/mega-s01e03-what-it-shows">github.com/sabakp01/mega-s01e03-what-it-shows</a>:</p>
 <ul>
-<li><strong>parser</strong> — dates read month first for day-first tenants — <strong>379 reports</strong></li>
-<li><strong>hint</strong> — booking-v3 prints <code>MM/DD/YYYY</code> for day-first tenants — <strong>33 reports</strong></li>
+<li><strong>parser</strong> — dates read month first for day-first tenants — <strong>379 reports</strong> — <a href="https://github.com/sabakp01/mega-s01e03-what-it-shows/issues/1">issue #1</a></li>
+<li><strong>hint</strong> — booking-v3 prints <code>MM/DD/YYYY</code> for day-first tenants — <strong>33 reports</strong> — <a href="https://github.com/sabakp01/mega-s01e03-what-it-shows/issues/2">issue #2</a></li>
 </ul>
 <h2>What the counts rest on</h2>
 <ul>

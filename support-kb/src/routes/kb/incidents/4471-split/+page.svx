@@ -39,11 +39,11 @@ ticket and its own fix.
 
 ## Tickets filed
 
-One ticket per problem, filed in the public repo for this analysis (linked from this
-page's source in that repo, `README.md`):
+One ticket per problem, filed in
+[github.com/sabakp01/mega-s01e03-what-it-shows](https://github.com/sabakp01/mega-s01e03-what-it-shows):
 
-- **parser** — dates read month first for day-first tenants — **379 reports**
-- **hint** — booking-v3 prints `MM/DD/YYYY` for day-first tenants — **33 reports**
+- **parser** — dates read month first for day-first tenants — **379 reports** — [issue #1](https://github.com/sabakp01/mega-s01e03-what-it-shows/issues/1)
+- **hint** — booking-v3 prints `MM/DD/YYYY` for day-first tenants — **33 reports** — [issue #2](https://github.com/sabakp01/mega-s01e03-what-it-shows/issues/2)
 
 ## What the counts rest on
 

@@ -7,8 +7,8 @@ not one.
 
 | problem | reports | ticket |
 |---|---|---|
-| `parser` — shared parser reads every date month first; day-first tenants get month/day flipped | **379** | see issue #1 |
-| `hint` — `booking-v3` prints `MM/DD/YYYY` under the date field for day-first tenants; the form reads what people type the tenant's way | **33** | see issue #2 |
+| `parser` — shared parser reads every date month first; day-first tenants get month/day flipped | **379** | [issue #1](https://github.com/sabakp01/mega-s01e03-what-it-shows/issues/1) |
+| `hint` — `booking-v3` prints `MM/DD/YYYY` under the date field for day-first tenants; the form reads what people type the tenant's way | **33** | [issue #2](https://github.com/sabakp01/mega-s01e03-what-it-shows/issues/2) |
 
 Counts are over **412 unique ids** (the raw export holds 427 entries; 15 ids repeat from
 overlapping export pages). Intake tags disagree with the cause on 38 reports.
